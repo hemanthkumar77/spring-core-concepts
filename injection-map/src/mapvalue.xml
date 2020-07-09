@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+<bean id="mapped" class="support.map">
+<property name="map1">
+<map>
+     <entry key="1" value-ref="emp"></entry>
+     <entry key="2" value-ref="emp2"></entry>
+     <entry key="3" value-ref="emp3"></entry>
+</map>
+</property>
+</bean>
+<bean id="emp" class="model.employee">
+<property name="employee_id" value="201"/>
+<property name="employee_name" value="jigsaw"/>
+<property name="department" value="java	"/>
+</bean>
+<bean id="emp2" class="model.employee">
+<property name="employee_id" value="202"/>
+<property name="employee_name" value="Joker"/>
+<property name="department" value="cloud"/>
+</bean>
+<bean id="emp3" class="model.employee">
+<property name="employee_id" value="203"/>
+<property name="employee_name" value="punisher"/>
+<property name="department" value=".net"/>
+</bean>
+</beans>
